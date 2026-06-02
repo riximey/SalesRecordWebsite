@@ -1,0 +1,13 @@
+
+.receiptaddbtn {
+    font-family: "Poppins", sans-serif;
+    background-color: #364c84;
+    color: #f7f3e7;
+    border-radius: 10px;
+    padding: 6px 20px;
+    transition: all 0.3s ease;
+}
+.receiptaddbtn:hover{
+    background-color: #23386b;
+    color: #f7f3e7;
+}
