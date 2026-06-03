@@ -24,7 +24,8 @@ class ProfileController extends Controller
                 'profile_picture'=>$filename
             ]);
         }
-
+        
+        session(['user' => $user->fresh()]);
         return back()->with('success', 'Profile Updated');
     }
 
@@ -50,7 +51,6 @@ class ProfileController extends Controller
     $user->update($data);
 
     session(['user' => $user->fresh()]);
-
     return back()->with('edit_success', 'Profile updated successfully.');
 }
 
