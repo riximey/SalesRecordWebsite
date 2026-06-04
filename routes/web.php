@@ -19,6 +19,7 @@ Route::post('/loggingIn', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout']);
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserController;
 
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/customers',           [AdminController::class, 'index'])->name('customers');
@@ -42,3 +43,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
 });
 
 Route::get('/home', [DashboardController::class, 'index'])->name('dashboard');
+
+Route::get('/users', [UserController::class, 'showUsers'])->name('users.index');
+Route::post('/users/add', [UserController::class, 'addUser'])->name('users.add');
+Route::post('/users/edit', [UserController::class, 'editUser'])->name('users.edit');
+Route::post('/users/archive', [UserController::class, 'archiveUser'])->name('users.archive');

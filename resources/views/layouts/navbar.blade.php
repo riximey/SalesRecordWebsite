@@ -5,6 +5,7 @@
             <a class="nav-link d-inline me-3" href="/home">Home</a>
             <a class="nav-link d-inline me-3" href="/admin/orders">Order</a>
             <a class="nav-link d-inline me-3" href="/admin/sales">Sales</a>
+            <a class="nav-link d-inline me-3" href="/users">Users</a>
             <a class="nav-link d-inline me-3" href="/admin/showProfile">Profile</a>
             <form method="POST" action="/logout" class="d-inline">
                 @csrf
